@@ -36,9 +36,9 @@ class History extends StatelessWidget {
           ),
           SizedBox(height: 5.h),
           const HistoryCard(
-            time: '15 mins',
-            address: 'Road 36, Phase 3, Gwarinpa',
-            img: 'assets/image/drop.svg',
+            time: '26, Feb 2023',
+            address: 'From- Road 36, Phase 3, Kubwa',
+            img: 'assets/image/arrive.svg',
             amount: '3,000',
           ),
         ],
