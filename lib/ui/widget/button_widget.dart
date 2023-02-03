@@ -5,8 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ButtonWidget extends StatelessWidget {
   const ButtonWidget(
       {super.key,
-      this.buttonText,
+      required this.buttonText,
       this.width,
+      this.height,
+      required this.fontSize,
       this.color,
       this.buttonColor,
       this.isLight = true,
@@ -14,20 +16,21 @@ class ButtonWidget extends StatelessWidget {
       required this.radius,
       this.weight,
       this.onPressed});
-  final String? buttonText;
+  final String buttonText;
   final Color? color;
   final Color? buttonColor;
   final Color? buttonBorderColor;
   final bool? isLight;
   final Function()? onPressed;
   final BorderRadius radius;
-  final double? width;
+  final double? width, height;
+  final double fontSize;
   final FontWeight? weight;
 
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints.tightFor(width: width, height: 80.h),
+      constraints: BoxConstraints.tightFor(width: width, height: height),
       child: TextButton(
         onPressed: onPressed,
         style: ButtonStyle(
@@ -43,8 +46,8 @@ class ButtonWidget extends StatelessWidget {
           ),
         ),
         child: TextView(
-          text: buttonText!,
-          fontSize: 16.sp,
+          text: buttonText,
+          fontSize: fontSize,
           color: color,
           fontWeight: weight,
         ),

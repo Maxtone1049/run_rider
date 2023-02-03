@@ -70,6 +70,8 @@ class DropOffLocation extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ButtonWidget(
+                    fontSize: 16.sp,
+                    height: 50.h,
                     weight: FontWeight.w600,
                     width: 250.w,
                     radius: BorderRadius.circular(10.r),

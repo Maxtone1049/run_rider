@@ -44,6 +44,8 @@ class SignUpHome extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   ButtonWidget(
+                    fontSize: 16.sp,
+                    height: 50.h,
                     width: double.infinity,
                     weight: FontWeight.w700,
                     radius: BorderRadius.circular(18.r),

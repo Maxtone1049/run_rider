@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:run/ui/Home/About/about.dart';
 import 'package:run/ui/Home/Dashboard/Widget/draw_button.dart';
 import 'package:run/ui/Home/Drop/drop.dart';
 import 'package:run/ui/Home/History/history.dart';
+import 'package:run/ui/Home/Payment/payment.dart';
+import 'package:run/ui/Home/Promotion/promo.dart';
+import 'package:run/ui/Home/Support/support.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
@@ -34,12 +38,15 @@ class Dashboard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Expanded(
-                      flex: 0,
-                      child: Image.asset(
-                        'assets/image/user.png',
-                        height: 97.h,
-                        width: 97.w,
+                    InkWell(
+                      onTap: () {},
+                      child: Expanded(
+                        flex: 0,
+                        child: Image.asset(
+                          'assets/image/user.png',
+                          height: 97.h,
+                          width: 97.w,
+                        ),
                       ),
                     ),
                     Expanded(
@@ -83,32 +90,67 @@ class Dashboard extends StatelessWidget {
                   DrawButton(
                     text: 'Payment',
                     image: 'assets/image/pay.svg',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Payment(),
+                        ),
+                      );
+                    },
                   ),
                   DrawButton(
                     text: 'History',
                     image: 'assets/image/history.svg',
-                    onPressed: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const History(),
-                      ),
-                    ),
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const History(),
+                        ),
+                      );
+                    },
                   ),
                   DrawButton(
                     text: 'Promotion',
                     image: 'assets/image/promote.svg',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Promo(),
+                        ),
+                      );
+                    },
                   ),
                   DrawButton(
                     text: 'Support',
                     image: 'assets/image/support.svg',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Support(),
+                        ),
+                      );
+                    },
                   ),
                   DrawButton(
                     text: 'About',
                     image: 'assets/image/about.svg',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const About(),
+                        ),
+                      );
+                    },
                   ),
                 ],
               ),
@@ -144,15 +186,11 @@ class Dashboard extends StatelessWidget {
                 ButtonWidget(
                   weight: FontWeight.w700,
                   width: 200.w,
+                  fontSize: 16.sp,
                   radius: BorderRadius.circular(10.r),
                   buttonText: 'Become a rider',
                   color: AppColor.white,
-                  onPressed: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const Dashboard(),
-                    ),
-                  ),
+                  onPressed: () {},
                   buttonBorderColor: AppColor.primary,
                   buttonColor: AppColor.primary,
                 ),

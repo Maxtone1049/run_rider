@@ -115,6 +115,8 @@ class _SignUpState extends State<SignUp> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       ButtonWidget(
+                        fontSize: 16.sp,
+                        height: 50.h,
                         width: 250.w,
                         weight: FontWeight.w600,
                         radius: BorderRadius.circular(5.r),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import 'package:flutter_svg/svg.dart';
 import 'package:run/ui/Home/History/Widget/history_card.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/text_view_widget.dart';

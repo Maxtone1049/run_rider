@@ -65,6 +65,8 @@ class _SignUpThreeState extends State<SignUpThree> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     ButtonWidget(
+                      fontSize: 16.sp,
+                      height: 50.h,
                       weight: FontWeight.w600,
                       width: 250.w,
                       radius: BorderRadius.circular(5.r),
