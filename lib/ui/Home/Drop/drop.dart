@@ -4,6 +4,7 @@ import 'package:run/ui/Home/Drop/Widget/function_button.dart';
 import 'package:run/ui/Home/Drop/dispatch.dart';
 import 'package:run/ui/Home/Drop/dropoff.dart';
 import 'package:run/ui/Home/Drop/pickup.dart';
+import 'package:run/ui/Home/Dashboard/Widget/bottom_sheet.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/text_form_widget.dart';
@@ -17,6 +18,11 @@ class DropLocation extends StatefulWidget {
 }
 
 class _DropLocationState extends State<DropLocation> {
+  final Shader _linegrad = const LinearGradient(
+    colors: [Color(0XFFC155BD), Color(0XFFCFA044)],
+    begin: Alignment.centerLeft,
+    end: Alignment.bottomRight,
+  ).createShader(Rect.fromLTWH(0.0, 0.0, 320.h, 80.h));
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,6 +32,7 @@ class _DropLocationState extends State<DropLocation> {
         elevation: 0,
         iconTheme: const IconThemeData(
           color: AppColor.black,
+          size: 18.0,
         ),
         title: TextView(
           text: 'Let\'s Run It',
@@ -112,6 +119,10 @@ class _DropLocationState extends State<DropLocation> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     TextFormWidget(
+                      color1: AppColor.textgrey,
+                      color2: AppColor.textgrey,
+                      color3: AppColor.textgrey,
+                      color4: AppColor.textgrey,
                       radius: BorderRadius.circular(5.r),
                       fillcolor: AppColor.textgrey,
                       label: '',
@@ -121,6 +132,10 @@ class _DropLocationState extends State<DropLocation> {
                       height: 30.h,
                     ),
                     TextFormWidget(
+                      color1: AppColor.textgrey,
+                      color2: AppColor.textgrey,
+                      color3: AppColor.textgrey,
+                      color4: AppColor.textgrey,
                       radius: BorderRadius.circular(5.r),
                       fillcolor: AppColor.textgrey,
                       label: '',
@@ -146,7 +161,30 @@ class _DropLocationState extends State<DropLocation> {
                     radius: BorderRadius.circular(10.r),
                     buttonText: 'Continue',
                     color: AppColor.white,
-                    onPressed: () => {},
+                    onPressed: () {
+                      Navigator.pop(context);
+                      showModalBottomSheet(
+                        backgroundColor: Colors.white,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(10.r),
+                          ),
+                        ),
+                        context: context,
+                        builder: (context) {
+                          return SingleChildScrollView(
+                            scrollDirection: Axis.vertical,
+                            child: Padding(
+                              padding: EdgeInsets.symmetric(
+                                horizontal: 20.h,
+                                vertical: 20.h,
+                              ),
+                              child: BottomDetail(linegrad: _linegrad),
+                            ),
+                          );
+                        },
+                      );
+                    },
                     buttonBorderColor: AppColor.ticgey,
                     buttonColor: AppColor.ticgey,
                   ),

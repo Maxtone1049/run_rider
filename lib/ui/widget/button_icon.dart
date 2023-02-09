@@ -1,4 +1,3 @@
-import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +27,7 @@ class ButtonIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints.tightFor(width: width, height: 80.h),
+      constraints: BoxConstraints.tightFor(width: width, height: 60.h),
       child: TextButton(
         onPressed: onPressed,
         style: ButtonStyle(
@@ -43,44 +42,33 @@ class ButtonIconWidget extends StatelessWidget {
             ),
           ),
         ),
-        child: Row(
-          // mainAxisAlignment: MainAxisAlignment.start,
-          // crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            // Card(
-            //   color: AppColor.white,
-            //   shape: RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(50),
-            //   ),
-            //   child: Padding(
-            //     padding: EdgeInsets.symmetric(
-            //       horizontal: 5.h,
-            //       vertical: 5.h,
-            //     ),
-            //     child: Image.asset(img),
-            //   ),
-            // ),
-            Expanded(
-              flex: 1,
-              child: Image.asset(
-                img,
-                height: 40.h,
-                width: 40.w,
+        child: Center(
+          child: Row(
+            // mainAxisAlignment: MainAxisAlignment.start,
+            // crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Expanded(
+                flex: 1,
+                child: Image.asset(
+                  img,
+                  height: 40.h,
+                  width: 40.w,
+                ),
               ),
-            ),
-            SizedBox(
-              width: 5.w,
-            ),
-            Expanded(
-              flex: 2,
-              child: TextView(
-                text: buttonText!,
-                fontSize: 16.sp,
-                color: color,
-                fontWeight: FontWeight.w500,
+              SizedBox(
+                width: 5.w,
               ),
-            ),
-          ],
+              Expanded(
+                flex: 2,
+                child: TextView(
+                  text: buttonText!,
+                  fontSize: 16.sp,
+                  color: color,
+                  fontWeight: FontWeight.w500,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

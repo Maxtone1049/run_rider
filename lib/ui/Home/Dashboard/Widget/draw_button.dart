@@ -18,7 +18,7 @@ class DrawButton extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Padding(
-        padding: EdgeInsets.symmetric(vertical: 25.h),
+        padding: EdgeInsets.symmetric(vertical: 20.h),
         child: Row(
           children: [
             Expanded(

@@ -35,11 +35,16 @@ class TextFormWidget extends StatelessWidget {
   final double? size;
   final int? maxline;
   final Color? fillcolor;
+  final Color color1, color2, color3, color4;
   final BorderRadius radius;
 
   TextFormWidget({
     Key? key,
     this.assets,
+    required this.color1,
+    required this.color2,
+    required this.color3,
+    required this.color4,
     required this.radius,
     this.fillcolor,
     this.maxline,
@@ -91,32 +96,51 @@ class TextFormWidget extends StatelessWidget {
               contentPadding: EdgeInsets.fromLTRB(10.h, 5.h, 10.h, 5.h),
               labelText: label ?? '',
               labelStyle: GoogleFonts.poppins(
-                  color: AppColor.black,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400),
+                color: AppColor.black,
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
+              ),
               border: OutlineInputBorder(
                 borderRadius: radius,
-                borderSide: BorderSide(width: 1.w, color: AppColor.textgrey),
+                borderSide: BorderSide(
+                  width: 1.w,
+                  color: color1,
+                ),
               ),
               focusedBorder: OutlineInputBorder(
                 borderRadius: radius,
-                borderSide: BorderSide(width: 1.w, color: AppColor.textgrey),
+                borderSide: BorderSide(
+                  width: 1.w,
+                  color: color2,
+                ),
               ),
               disabledBorder: OutlineInputBorder(
                 borderRadius: radius,
-                borderSide: BorderSide(width: 1.w, color: AppColor.textgrey),
+                borderSide: BorderSide(
+                  width: 1.w,
+                  color: color3,
+                ),
               ),
               enabledBorder: OutlineInputBorder(
                 borderRadius: radius,
-                borderSide: BorderSide(width: 1.w, color: AppColor.textgrey),
+                borderSide: BorderSide(
+                  width: 1.w,
+                  color: color4,
+                ),
               ),
               errorBorder: OutlineInputBorder(
                 borderRadius: radius,
-                borderSide: BorderSide(width: 1.w, color: AppColor.textgrey),
+                borderSide: BorderSide(
+                  width: 1.w,
+                  color: AppColor.textgrey,
+                ),
               ),
               focusedErrorBorder: OutlineInputBorder(
                 borderRadius: radius,
-                borderSide: BorderSide(width: 1.w, color: Colors.redAccent),
+                borderSide: BorderSide(
+                  width: 1.w,
+                  color: Colors.redAccent,
+                ),
               ),
               prefixIcon: prefixWidget ??
                   (prefixIcon != null

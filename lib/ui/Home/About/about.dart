@@ -9,7 +9,7 @@ class About extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColor.white,
+      backgroundColor: AppColor.textgrey,
       appBar: AppBar(
         backgroundColor: AppColor.white,
         elevation: 0,
@@ -25,13 +25,20 @@ class About extends StatelessWidget {
         ),
         centerTitle: true,
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            vertical: 15.h,
-            horizontal: 25.h,
+      body: Container(
+        padding: EdgeInsets.symmetric(
+          vertical: 15.h,
+          horizontal: 25.h,
+        ),
+        constraints: const BoxConstraints.expand(),
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+            fit: BoxFit.cover,
+            image: AssetImage('assets/image/abt.png'),
           ),
+        ),
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

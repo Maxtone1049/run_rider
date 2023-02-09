@@ -45,6 +45,10 @@ class _SignUpThreeState extends State<SignUpThree> {
                   height: 20.h,
                 ),
                 TextFormWidget(
+                  color1: AppColor.textgrey,
+                  color2: AppColor.textgrey,
+                  color3: AppColor.textgrey,
+                  color4: AppColor.textgrey,
                   radius: BorderRadius.circular(5.r),
                   fillcolor: AppColor.textgrey,
                   label: '',
@@ -54,6 +58,10 @@ class _SignUpThreeState extends State<SignUpThree> {
                   height: 30.h,
                 ),
                 TextFormWidget(
+                  color1: AppColor.textgrey,
+                  color2: AppColor.textgrey,
+                  color3: AppColor.textgrey,
+                  color4: AppColor.textgrey,
                   radius: BorderRadius.circular(5.r),
                   label: '',
                   text: 'Last Name',
@@ -66,7 +74,7 @@ class _SignUpThreeState extends State<SignUpThree> {
                   children: [
                     ButtonWidget(
                       fontSize: 16.sp,
-                      height: 50.h,
+                      height: 60.h,
                       weight: FontWeight.w600,
                       width: 250.w,
                       radius: BorderRadius.circular(5.r),

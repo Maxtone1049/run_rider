@@ -45,11 +45,13 @@ class ButtonWidget extends StatelessWidget {
             ),
           ),
         ),
-        child: TextView(
-          text: buttonText,
-          fontSize: fontSize,
-          color: color,
-          fontWeight: weight,
+        child: Center(
+          child: TextView(
+            text: buttonText,
+            fontSize: fontSize,
+            color: color,
+            fontWeight: weight,
+          ),
         ),
       ),
     );

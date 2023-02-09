@@ -4,6 +4,7 @@ import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_icon.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/input_field.dart';
+import 'package:run/ui/widget/text_view_widget.dart';
 
 class PickUpLocation extends StatelessWidget {
   const PickUpLocation({super.key});
@@ -17,6 +18,7 @@ class PickUpLocation extends StatelessWidget {
         elevation: 0,
         iconTheme: const IconThemeData(
           color: AppColor.black,
+          size: 18.0,
         ),
       ),
       body: SingleChildScrollView(
@@ -36,7 +38,9 @@ class PickUpLocation extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: CustomTextfield(
-                      radius: BorderRadius.circular(10.r),
+                      width: 321.w,
+                      height: 50.h,
+                      radius: BorderRadius.circular(8.r),
                       obscureText: false,
                     ),
                   ),
@@ -56,7 +60,8 @@ class PickUpLocation extends StatelessWidget {
                   SizedBox(
                     width: 142.w,
                     child: CustomTextfield(
-                      radius: BorderRadius.circular(10.r),
+                      height: 50.h,
+                      radius: BorderRadius.circular(8.r),
                       hintText: 'Block Number',
                       obscureText: false,
                     ),
@@ -90,7 +95,7 @@ class PickUpLocation extends StatelessWidget {
                     radius: BorderRadius.circular(10.r),
                     buttonText: 'Continue',
                     color: AppColor.white,
-                    onPressed: () => {},
+                    onPressed: () {},
                     buttonBorderColor: AppColor.primary,
                     buttonColor: AppColor.primary,
                   ),

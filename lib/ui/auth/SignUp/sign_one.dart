@@ -30,12 +30,17 @@ class SignUpHome extends StatelessWidget {
             borderRadius: BorderRadius.circular(10.r),
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              TextView(
-                text: 'Sign up',
-                fontSize: 24.sp,
-                fontWeight: FontWeight.w600,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  TextView(
+                    text: 'Sign up',
+                    fontSize: 24.sp,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ],
               ),
               SizedBox(
                 height: 20.h,
@@ -45,8 +50,8 @@ class SignUpHome extends StatelessWidget {
                 children: [
                   ButtonWidget(
                     fontSize: 16.sp,
-                    height: 50.h,
-                    width: double.infinity,
+                    height: 60.h,
+                    width: 300.w,
                     weight: FontWeight.w700,
                     radius: BorderRadius.circular(18.r),
                     buttonText: 'Sign up with mail',
@@ -72,7 +77,8 @@ class SignUpHome extends StatelessWidget {
                     height: 50.h,
                   ),
                   ButtonIconWidget(
-                    radius: BorderRadius.circular(50.r),
+                    width: 300.w,
+                    radius: BorderRadius.circular(20.r),
                     img: 'assets/image/google.png',
                     buttonText: 'Sign In with Google',
                     buttonColor: AppColor.white,
@@ -84,7 +90,8 @@ class SignUpHome extends StatelessWidget {
                     height: 30.h,
                   ),
                   ButtonIconWidget(
-                    radius: BorderRadius.circular(50.r),
+                    width: 300.w,
+                    radius: BorderRadius.circular(20.r),
                     img: 'assets/image/fb.png',
                     buttonText: 'Sign In with Facebook',
                     buttonColor: AppColor.white,
@@ -96,7 +103,8 @@ class SignUpHome extends StatelessWidget {
                     height: 30.h,
                   ),
                   ButtonIconWidget(
-                    radius: BorderRadius.circular(50.r),
+                    width: 300.w,
+                    radius: BorderRadius.circular(20.r),
                     img: 'assets/image/apple.png',
                     buttonText: 'Sign In with Apple',
                     buttonColor: AppColor.white,

@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:run/ui/Home/Drop/Widget/function_button.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/input_field.dart';
-import 'package:run/ui/widget/text_form_widget.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
 
 class DispatchScreen extends StatelessWidget {
@@ -20,6 +18,7 @@ class DispatchScreen extends StatelessWidget {
         elevation: 0,
         iconTheme: const IconThemeData(
           color: AppColor.black,
+          size: 18.0,
         ),
         title: TextView(
           text: 'What are you dispatching',
@@ -36,6 +35,8 @@ class DispatchScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CustomTextfield(
+                width: 400.w,
+                height: 272.h,
                 radius: BorderRadius.circular(10.r),
                 hintText: 'What are you transporting?',
                 obscureText: false,

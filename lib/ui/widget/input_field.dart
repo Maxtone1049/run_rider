@@ -10,9 +10,12 @@ class CustomTextfield extends StatelessWidget {
   final IconData? input;
   final BorderRadius radius;
   final int? maxline;
+  final double? width, height;
 
   const CustomTextfield({
     Key? key,
+    this.width,
+    this.height,
     required this.obscureText,
     this.hintText,
     required this.radius,
@@ -22,30 +25,34 @@ class CustomTextfield extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return TextField(
-      obscureText: obscureText,
-      controller: controller,
-      style: GoogleFonts.poppins(
-        color: AppColor.black,
-        fontSize: 14.sp,
-        fontWeight: FontWeight.w400,
-      ),
-      decoration: InputDecoration(
-        filled: true,
-        fillColor: AppColor.textgrey,
-        border: InputBorder.none,
-        enabledBorder: OutlineInputBorder(
-          borderSide: const BorderSide(width: 1, color: AppColor.textgrey),
-          borderRadius: radius,
+    return ConstrainedBox(
+      constraints: BoxConstraints.tightFor(width: width, height: height),
+      child: TextField(
+        obscureText: obscureText,
+        controller: controller,
+        style: GoogleFonts.poppins(
+          color: AppColor.black,
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w400,
         ),
-        focusedBorder: OutlineInputBorder(
-          borderSide: const BorderSide(width: 1, color: AppColor.textgrey),
-          borderRadius: radius,
+        decoration: InputDecoration(
+          filled: true,
+          contentPadding: EdgeInsets.fromLTRB(10.h, 5.h, 10.h, 5.h),
+          fillColor: AppColor.textgrey,
+          border: InputBorder.none,
+          enabledBorder: OutlineInputBorder(
+            borderSide: const BorderSide(width: 1, color: AppColor.textgrey),
+            borderRadius: radius,
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderSide: const BorderSide(width: 1, color: AppColor.textgrey),
+            borderRadius: radius,
+          ),
+          hintText: hintText,
         ),
-        hintText: hintText,
+        maxLines: maxline,
+        cursorColor: Colors.black.withOpacity(.5),
       ),
-      maxLines: maxline,
-      cursorColor: Colors.black.withOpacity(.5),
     );
   }
 }

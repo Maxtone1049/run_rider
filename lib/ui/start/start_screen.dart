@@ -58,11 +58,10 @@ class _StartScreenState extends State<StartScreen> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            InkWell(
-              onTap: () {},
-              child: Image.asset(
-                "assets/image/logo.png",
-              ),
+            Image.asset(
+              "assets/image/logo.png",
+              height: 200.h,
+              width: 200.w,
             ),
             SizedBox(
               height: 50.h,

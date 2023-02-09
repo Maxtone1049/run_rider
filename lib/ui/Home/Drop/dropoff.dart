@@ -17,6 +17,7 @@ class DropOffLocation extends StatelessWidget {
         elevation: 0,
         iconTheme: const IconThemeData(
           color: AppColor.black,
+          size: 18.0,
         ),
       ),
       body: SingleChildScrollView(
@@ -36,7 +37,9 @@ class DropOffLocation extends StatelessWidget {
                   Expanded(
                     flex: 1,
                     child: CustomTextfield(
-                      radius: BorderRadius.circular(10.r),
+                      width: 321.w,
+                      height: 50.h,
+                      radius: BorderRadius.circular(8.r),
                       obscureText: false,
                     ),
                   ),
@@ -56,7 +59,8 @@ class DropOffLocation extends StatelessWidget {
                   SizedBox(
                     width: 142.w,
                     child: CustomTextfield(
-                      radius: BorderRadius.circular(10.r),
+                      height: 50.h,
+                      radius: BorderRadius.circular(8.r),
                       hintText: 'Block Number',
                       obscureText: false,
                     ),
