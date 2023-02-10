@@ -11,59 +11,64 @@ class HistoryCard extends StatelessWidget {
     required this.address,
     required this.time,
     required this.amount,
+    required this.pressed,
   });
   final String img, address, time, amount;
+  final VoidCallback pressed;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(
-        horizontal: 15.h,
-        vertical: 10.h,
-      ),
-      decoration: const BoxDecoration(
-        color: AppColor.textgrey,
-      ),
-      child: Row(
-        children: [
-          Expanded(
-            flex: 0,
-            child: SvgPicture.asset(
-              img,
-              width: 18.w,
-              height: 22.h,
+    return InkWell(
+      onTap: pressed,
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: 15.h,
+          vertical: 10.h,
+        ),
+        decoration: const BoxDecoration(
+          color: AppColor.textgrey,
+        ),
+        child: Row(
+          children: [
+            Expanded(
+              flex: 0,
+              child: SvgPicture.asset(
+                img,
+                width: 18.w,
+                height: 22.h,
+              ),
             ),
-          ),
-          SizedBox(
-            width: 15.w,
-          ),
-          Expanded(
-            flex: 1,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                TextView(
-                  text: address,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
-                ),
-                TextView(
-                  text: time,
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w400,
-                ),
-              ],
+            SizedBox(
+              width: 15.w,
             ),
-          ),
-          Expanded(
-            flex: 0,
-            child: TextView(
-              text: 'NGN $amount',
-              fontSize: 14.sp,
-              fontWeight: FontWeight.w600,
+            Expanded(
+              flex: 1,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  TextView(
+                    text: address,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                  TextView(
+                    text: time,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+            Expanded(
+              flex: 0,
+              child: TextView(
+                text: 'NGN $amount',
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
