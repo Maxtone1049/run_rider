@@ -4,7 +4,6 @@ import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_icon.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/input_field.dart';
-import 'package:run/ui/widget/text_view_widget.dart';
 
 class PickUpLocation extends StatelessWidget {
   const PickUpLocation({super.key});

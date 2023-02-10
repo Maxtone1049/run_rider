@@ -64,7 +64,7 @@ class _RideWidgetState extends State<RideWidget> {
             Column(
               children: [
                 TextView(
-                  text: 'NGN ' + widget.price1,
+                  text: 'NGN ${widget.price1}',
                   fontSize: 18.sp,
                   fontWeight: FontWeight.w700,
                   color: AppColor.black,
@@ -74,7 +74,7 @@ class _RideWidgetState extends State<RideWidget> {
                 ),
                 RichText(
                   text: TextSpan(
-                    text: 'NGN ' + widget.total,
+                    text: 'NGN ${widget.total}',
                     style: GoogleFonts.poppins(
                       color: AppColor.black,
                       fontSize: 12.sp,

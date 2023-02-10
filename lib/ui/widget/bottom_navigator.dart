@@ -1,9 +1,9 @@
 // import 'package:run/ui/app_utils/color.dart';
 import 'package:flutter/material.dart';
 
-Container buildMyNavBar(BuildContext context) {
+SizedBox buildMyNavBar(BuildContext context) {
   int pageIndex = 0;
-  return Container(
+  return SizedBox(
     height: 60,
     // color: AppColor.fein,
     child: Row(

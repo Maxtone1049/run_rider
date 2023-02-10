@@ -1,6 +1,4 @@
 import 'package:run/ui/app_utils/color.dart';
-import 'package:run/ui/auth/Otp/otp.dart';
-import 'package:run/ui/auth/SignUp/sign_three.dart';
 import 'package:run/ui/auth/SignUp/sign_two.dart';
 import 'package:run/ui/widget/button_icon.dart';
 import 'package:run/ui/widget/button_widget.dart';

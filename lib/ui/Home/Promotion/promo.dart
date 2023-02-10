@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:run/ui/Home/Payment/Widget/card_details.dart';
 import 'package:run/ui/Home/Promotion/Widget/promo_card.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_widget.dart';

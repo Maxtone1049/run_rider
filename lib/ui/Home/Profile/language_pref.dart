@@ -11,7 +11,6 @@ class LanguagePref extends StatefulWidget {
 }
 
 class _LanguagePrefState extends State<LanguagePref> {
-  bool _value = false;
   int val = -1;
   @override
   Widget build(BuildContext context) {
@@ -68,54 +67,44 @@ class _LanguagePrefState extends State<LanguagePref> {
               height: 25.h,
             ),
             ListTile(
-              title: TextView(text: 'UK English'),
+              title: const TextView(text: 'UK English'),
               leading: Radio(
                 value: "UK English",
                 groupValue: "group value",
-                onChanged: (value) {
-                  print(value); //selected value
-                },
+                onChanged: (value) {},
               ),
             ),
             ListTile(
-              title: TextView(text: 'US English'),
+              title: const TextView(text: 'US English'),
               leading: Radio(
                 value: "US English",
                 groupValue: "group value",
-                onChanged: (value) {
-                  print(value); //selected value
-                },
+                onChanged: (value) {},
               ),
             ),
             ListTile(
-              title: TextView(text: 'Française'),
+              title: const TextView(text: 'Française'),
               leading: Radio(
                 activeColor: AppColor.black,
                 value: "Française",
                 groupValue: "group value",
-                onChanged: (value) {
-                  print(value); //selected value
-                },
+                onChanged: (value) {},
               ),
             ),
             ListTile(
-              title: TextView(text: 'Portugueses'),
+              title: const TextView(text: 'Portugueses'),
               leading: Radio(
                 value: "Portugueses",
                 groupValue: "group value",
-                onChanged: (value) {
-                  print(value); //selected value
-                },
+                onChanged: (value) {},
               ),
             ),
             ListTile(
-              title: TextView(text: 'UK English'),
+              title: const TextView(text: 'UK English'),
               leading: Radio(
                 value: "US English",
                 groupValue: "group value",
-                onChanged: (value) {
-                  print(value); //selected value
-                },
+                onChanged: (value) {},
               ),
             )
           ],

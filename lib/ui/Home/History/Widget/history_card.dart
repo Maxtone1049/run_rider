@@ -58,7 +58,7 @@ class HistoryCard extends StatelessWidget {
           Expanded(
             flex: 0,
             child: TextView(
-              text: 'NGN ' + amount,
+              text: 'NGN $amount',
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
             ),
