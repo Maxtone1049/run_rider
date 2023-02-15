@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:run/ui/Home/Drop/drop.dart';
-import 'package:run/ui/Home/History/history.dart';
+import 'package:run/ui/Home/History/history_ride.dart';
 import 'package:run/ui/Home/Profile/edit_profile.dart';
 import 'package:run/ui/Home/Profile/profile.dart';
 import 'package:run/ui/app_utils/color.dart';
@@ -195,7 +195,7 @@ class Dashboard extends StatelessWidget {
                     onTap: () => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const History(),
+                        builder: (context) => const HistoryRide(),
                       ),
                     ),
                     child: Image.asset(

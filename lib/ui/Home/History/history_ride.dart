@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:run/ui/Home/History/Pages/history_details.dart';
 import 'package:run/ui/Home/History/Widget/history_card.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
 
-class History extends StatelessWidget {
-  const History({super.key});
+import 'Pages/ride_details.dart';
+
+class HistoryRide extends StatelessWidget {
+  const HistoryRide({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,28 +30,36 @@ class History extends StatelessWidget {
       body: Column(
         children: [
           HistoryCard(
-            pressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HistoryDetail(),
-              ),
-            ),
+            pressed: () {},
             time: '15 mins',
             address: 'Road 36, Phase 3, Kubwa',
-            img: 'assets/image/arrive.svg',
+            img: 'assets/image/drop.svg',
             amount: '3,000',
           ),
           SizedBox(height: 5.h),
           HistoryCard(
-            pressed: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const HistoryDetail(),
-              ),
-            ),
+            pressed: () {
+              Navigator.pop(context);
+              showModalBottomSheet(
+                isScrollControlled: true,
+                backgroundColor: AppColor.textgrey,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(10.r),
+                  ),
+                ),
+                context: context,
+                builder: (context) {
+                  return const SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: RideDetails(),
+                  );
+                },
+              );
+            },
             time: '26, Feb 2023',
             address: 'From- Road 36, Phase 3, Kubwa',
-            img: 'assets/image/arrive.svg',
+            img: 'assets/image/drop.svg',
             amount: '3,000',
           ),
         ],

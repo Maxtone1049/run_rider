@@ -1,3 +1,4 @@
+import 'package:google_fonts/google_fonts.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/auth/Otp/otp.dart';
 import 'package:run/ui/widget/button_widget.dart';
@@ -102,7 +103,7 @@ class _SignUpState extends State<SignUp> {
                     RichText(
                       text: TextSpan(
                         text: 'By pressing continue, you agree to our',
-                        style: TextStyle(
+                        style: GoogleFonts.poppins(
                           fontWeight: FontWeight.w500,
                           fontSize: 9.sp,
                           color: AppColor.black,
@@ -110,7 +111,7 @@ class _SignUpState extends State<SignUp> {
                         children: <TextSpan>[
                           TextSpan(
                             text: ' Terms And Condition',
-                            style: TextStyle(
+                            style: GoogleFonts.poppins(
                                 fontSize: 9.sp,
                                 fontWeight: FontWeight.w500,
                                 color: AppColor.primary),
