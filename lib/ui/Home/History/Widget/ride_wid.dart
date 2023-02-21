@@ -69,7 +69,7 @@ class RideWidget extends StatelessWidget {
                 onTap: press,
                 child: SvgPicture.asset(
                   svgpic,
-                  width: 24.w,
+                  width: 30.w,
                   height: 24.h,
                 ),
               ),

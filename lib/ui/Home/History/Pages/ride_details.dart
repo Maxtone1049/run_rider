@@ -20,7 +20,7 @@ class RideDetails extends StatelessWidget {
           width: 600.w,
           padding: EdgeInsets.symmetric(
             horizontal: 20.h,
-            vertical: 25.h,
+            vertical: 15.h,
           ),
           decoration: const BoxDecoration(
             color: AppColor.white,
@@ -28,6 +28,27 @@ class RideDetails extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: 73.w,
+                      height: 5.h,
+                      decoration: BoxDecoration(
+                        color: AppColor.ticgey,
+                        borderRadius: BorderRadius.circular(
+                          10.r,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 9.h,
+              ),
               TextView(
                 text: 'Arriving in 4 mins',
                 fontSize: 16.sp,
@@ -191,12 +212,10 @@ class RideDetails extends StatelessWidget {
         RideWidget(
           press: () {
             showModalBottomSheet(
+              backgroundColor: Colors.white,
               isScrollControlled: true,
-              backgroundColor: AppColor.textgrey,
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.vertical(
-                  top: Radius.circular(10.r),
-                ),
+                borderRadius: BorderRadius.circular(10.r),
               ),
               context: context,
               builder: (context) {
