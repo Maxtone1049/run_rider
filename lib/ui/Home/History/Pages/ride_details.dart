@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:run/ui/Home/Dashboard/cancel_ride.dart';
 import 'package:run/ui/Home/History/Pages/deliver_screen.dart';
+import 'package:run/ui/Home/History/Widget/ride_wid.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
 
-import '../Widget/ride_wid.dart';
 import 'mini_copy.dart';
 
 class RideDetails extends StatelessWidget {
@@ -335,47 +336,57 @@ class RideDetails extends StatelessWidget {
         SizedBox(
           height: 10.h,
         ),
-        Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: 15.h,
-            vertical: 18.h,
-          ),
-          decoration: const BoxDecoration(
-            color: AppColor.white,
-          ),
-          child: Row(
-            children: [
-              Expanded(
-                flex: 0,
-                child: Image.asset(
-                  'assets/image/cancel.png',
-                  width: 43.w,
-                  height: 23.h,
+        InkWell(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: ((context) => const CancelRide()),
+              ),
+            );
+          },
+          child: Container(
+            padding: EdgeInsets.symmetric(
+              horizontal: 15.h,
+              vertical: 18.h,
+            ),
+            decoration: const BoxDecoration(
+              color: AppColor.white,
+            ),
+            child: Row(
+              children: [
+                Expanded(
+                  flex: 0,
+                  child: Image.asset(
+                    'assets/image/cancel.png',
+                    width: 43.w,
+                    height: 23.h,
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: 5.h,
-              ),
-              Expanded(
-                flex: 1,
-                child: TextView(
-                  text: 'Cancel',
-                  fontSize: 14.sp,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0XFF8F8F8F),
+                SizedBox(
+                  width: 5.h,
                 ),
-              ),
-              SizedBox(
-                width: 7.h,
-              ),
-              const Expanded(
-                flex: 0,
-                child: Icon(
-                  Icons.keyboard_arrow_right_outlined,
-                  size: 20.0,
+                Expanded(
+                  flex: 1,
+                  child: TextView(
+                    text: 'Cancel',
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w600,
+                    color: const Color(0XFF8F8F8F),
+                  ),
                 ),
-              ),
-            ],
+                SizedBox(
+                  width: 7.h,
+                ),
+                const Expanded(
+                  flex: 0,
+                  child: Icon(
+                    Icons.keyboard_arrow_right_outlined,
+                    size: 20.0,
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ],

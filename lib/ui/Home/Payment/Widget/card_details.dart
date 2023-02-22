@@ -49,18 +49,6 @@ class CardDetail extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
-          Expanded(
-            flex: 0,
-            child: InkWell(
-              onTap: () {},
-              child: TextView(
-                text: 'Remove',
-                fontSize: 14.sp,
-                fontWeight: FontWeight.w400,
-                color: AppColor.primary,
-              ),
-            ),
-          ),
         ],
       ),
     );

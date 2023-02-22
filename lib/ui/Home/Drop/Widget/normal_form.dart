@@ -10,18 +10,14 @@ import 'package:run/ui/widget/text_view_widget.dart';
 
 import 'function_button.dart';
 
-class FormWidget extends StatelessWidget {
-  const FormWidget({
-    super.key,
-  });
+class NormalForm extends StatelessWidget {
+  const NormalForm({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(
-          height: 20.h,
-        ),
         FunctionButton(
           press: () => Navigator.push(
             context,
@@ -34,6 +30,43 @@ class FormWidget extends StatelessWidget {
         ),
         SizedBox(
           height: 5.h,
+        ),
+        FunctionButton(
+          press: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const PickUpLocation(),
+            ),
+          ),
+          svg: 'assets/image/pick.svg',
+          text: 'Pick up location',
+        ),
+        Container(
+          padding: EdgeInsets.symmetric(
+            horizontal: 15.h,
+            vertical: 12.h,
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              TextView(
+                text: 'Receiver Details',
+                fontSize: 24.sp,
+                fontWeight: FontWeight.w500,
+                color: AppColor.primary,
+              ),
+              TextView(
+                text:
+                    'Please enter the correct details of the\nreceiver of the parcels',
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w400,
+              ),
+            ],
+          ),
+        ),
+        SizedBox(
+          height: 15.h,
         ),
         FunctionButton(
           press: () => Navigator.push(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:run/ui/Home/Dashboard/Widget/bottom_sheet.dart';
+import 'package:run/ui/Home/Drop/Widget/normal_form.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
@@ -69,9 +70,9 @@ class _DropLocationState extends State<DropLocation> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const FormWidget(),
+            const NormalForm(),
             SizedBox(
-              height: 15.h,
+              height: 5.h,
             ),
             ListView.builder(
               physics: const NeverScrollableScrollPhysics(),

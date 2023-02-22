@@ -3,9 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:run/ui/Home/Drop/Widget/ride_widget.dart';
+import 'package:run/ui/Home/Payment/payment.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/widget/button_widget.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
+
+import 'find_driver.dart';
 
 class BottomDetail extends StatelessWidget {
   const BottomDetail({
@@ -85,17 +88,27 @@ class BottomDetail extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Row(
-                      children: [
-                        TextView(
-                          text: 'Payment',
-                          fontSize: 14.sp,
-                          fontWeight: FontWeight.w400,
-                        ),
-                        const Icon(
-                          Icons.expand_more_outlined,
-                        ),
-                      ],
+                    InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Payment(),
+                          ),
+                        );
+                      },
+                      child: Row(
+                        children: [
+                          TextView(
+                            text: 'Payment',
+                            fontSize: 14.sp,
+                            fontWeight: FontWeight.w400,
+                          ),
+                          const Icon(
+                            Icons.expand_more_outlined,
+                          ),
+                        ],
+                      ),
                     ),
                     Row(
                       children: [
@@ -134,7 +147,25 @@ class BottomDetail extends StatelessWidget {
             radius: BorderRadius.circular(10.r),
             buttonText: 'Ok',
             color: AppColor.white,
-            onPressed: () => Navigator.pop(context),
+            onPressed: () {
+              Navigator.pop(context);
+              showModalBottomSheet(
+                backgroundColor: const Color(0XFFF6F6F6),
+                isScrollControlled: true,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(10.r),
+                  ),
+                ),
+                context: context,
+                builder: (context) {
+                  return const SingleChildScrollView(
+                    scrollDirection: Axis.vertical,
+                    child: FindDriver(),
+                  );
+                },
+              );
+            },
             buttonBorderColor: AppColor.primary,
             buttonColor: AppColor.primary,
           ),
