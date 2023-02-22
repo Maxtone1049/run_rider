@@ -97,6 +97,7 @@ class _FindDriverState extends State<FindDriver> {
                   buttonText: 'Cancel Order',
                   color: AppColor.white,
                   onPressed: () {
+                    Navigator.pop(context);
                     Navigator.push(
                       context,
                       MaterialPageRoute(
