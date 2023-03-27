@@ -40,11 +40,11 @@ class DispatchScreen extends StatelessWidget {
                 radius: BorderRadius.circular(10.r),
                 hintText: 'What are you transporting?',
                 obscureText: false,
-                maxline: 8,
+                maxline: 11,
               ),
-              SizedBox(
-                height: 25.h,
-              ),
+              // SizedBox(
+              //   height: 25.h,
+              // ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 15.h),
                 child: SingleChildScrollView(
@@ -67,30 +67,6 @@ class DispatchScreen extends StatelessWidget {
                         'assets/image/line.svg',
                         height: 30.h,
                       ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Image.asset(
-                        'assets/image/pic.png',
-                        height: 53.h,
-                        width: 53.w,
-                      ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Image.asset(
-                        'assets/image/pic2.png',
-                        height: 53.h,
-                        width: 53.w,
-                      ),
-                      SizedBox(
-                        width: 10.w,
-                      ),
-                      Image.asset(
-                        'assets/image/media.png',
-                        height: 53.h,
-                        width: 53.w,
-                      ),
                     ],
                   ),
                 ),
@@ -98,22 +74,26 @@ class DispatchScreen extends StatelessWidget {
               SizedBox(
                 height: 120.h,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ButtonWidget(
-                    fontSize: 16.sp,
-                    height: 50.h,
-                    weight: FontWeight.w600,
-                    width: 250.w,
-                    radius: BorderRadius.circular(10.r),
-                    buttonText: 'Continue',
-                    color: AppColor.white,
-                    onPressed: () => {},
-                    buttonBorderColor: AppColor.primary,
-                    buttonColor: AppColor.primary,
-                  ),
-                ],
+              Align(
+                alignment: FractionalOffset.bottomCenter,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    ButtonWidget(
+                      fontSize: 16.sp,
+                      height: 55.h,
+                      weight: FontWeight.w600,
+                      width: 250.w,
+                      radius: BorderRadius.circular(10.r),
+                      buttonText: 'Continue',
+                      color: AppColor.white,
+                      onPressed: () => {},
+                      buttonBorderColor: AppColor.primary,
+                      buttonColor: AppColor.primary,
+                    ),
+                  ],
+                ),
               ),
             ],
           ),

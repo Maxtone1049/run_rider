@@ -45,7 +45,8 @@ class ButtonWidget extends StatelessWidget {
             ),
           ),
         ),
-        child: Center(
+        child: Align(
+          alignment: Alignment.center,
           child: TextView(
             text: buttonText,
             fontSize: fontSize,

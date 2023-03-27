@@ -27,7 +27,7 @@ class ButtonIconWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
-      constraints: BoxConstraints.tightFor(width: width, height: 60.h),
+      constraints: BoxConstraints.tightFor(width: width, height: 55.h),
       child: TextButton(
         onPressed: onPressed,
         style: ButtonStyle(
@@ -42,10 +42,10 @@ class ButtonIconWidget extends StatelessWidget {
             ),
           ),
         ),
-        child: Center(
+        child: Align(
+          alignment: Alignment.center,
           child: Row(
-            // mainAxisAlignment: MainAxisAlignment.start,
-            // crossAxisAlignment: CrossAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Expanded(
                 flex: 1,
@@ -55,9 +55,9 @@ class ButtonIconWidget extends StatelessWidget {
                   width: 40.w,
                 ),
               ),
-              SizedBox(
-                width: 5.w,
-              ),
+              // SizedBox(
+              //   width: 5.w,
+              // ),
               Expanded(
                 flex: 2,
                 child: TextView(

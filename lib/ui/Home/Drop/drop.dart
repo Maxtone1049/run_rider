@@ -104,7 +104,7 @@ class _DropLocationState extends State<DropLocation> {
               children: [
                 ButtonWidget(
                   fontSize: 16.sp,
-                  height: 50.h,
+                  height: 55.h,
                   weight: FontWeight.w600,
                   width: 250.w,
                   radius: BorderRadius.circular(10.r),
@@ -117,16 +117,23 @@ class _DropLocationState extends State<DropLocation> {
                       isScrollControlled: true,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.vertical(
-                          top: Radius.circular(10.r),
+                          top: Radius.circular(17.r),
                         ),
                       ),
                       context: context,
-                      builder: (context) {
-                        return SingleChildScrollView(
-                          scrollDirection: Axis.vertical,
+                      builder: (context) => DraggableScrollableSheet(
+                        expand: false,
+                        initialChildSize: 0.4,
+                        maxChildSize: 0.9,
+                        minChildSize: 0.32,
+                        builder: (BuildContext context,
+                                ScrollController scrollController) =>
+                            SingleChildScrollView(
+                          controller: scrollController,
+                          // scrollDirection: Axis.vertical,
                           child: BottomDetail(linegrad: _linegrad),
-                        );
-                      },
+                        ),
+                      ),
                     );
                   },
                   buttonBorderColor: AppColor.ticgey,

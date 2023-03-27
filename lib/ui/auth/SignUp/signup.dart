@@ -2,6 +2,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:run/ui/app_utils/color.dart';
 import 'package:run/ui/auth/Otp/otp.dart';
 import 'package:run/ui/widget/button_widget.dart';
+import 'package:run/ui/widget/input_field.dart';
 import 'package:run/ui/widget/text_form_widget.dart';
 import 'package:run/ui/widget/text_view_widget.dart';
 import 'package:flutter/material.dart';
@@ -65,31 +66,76 @@ class _SignUpState extends State<SignUp> {
                   height: 10.h,
                 ),
                 Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
                       flex: 1,
-                      child: TextFormWidget(
-                        color1: AppColor.textgrey,
-                        color2: AppColor.textgrey,
-                        color3: AppColor.textgrey,
-                        color4: AppColor.textgrey,
-                        radius: BorderRadius.circular(5.r),
-                        // suffixIcon: Icon,
-                        label: '+234',
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 5.h,
+                          vertical: 1.h,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColor.textgrey,
+                          borderRadius: BorderRadius.circular(5.r),
+                          border: Border.all(
+                            width: 1.w,
+                            color: AppColor.primary,
+                          ),
+                        ),
+                        child: DropdownButton(
+                          isExpanded: true,
+                          items: [
+                            DropdownMenuItem(
+                              child: Row(
+                                children: [
+                                  Image.asset(
+                                    'assets/image/nig.png',
+                                    width: 21.w,
+                                    height: 15.h,
+                                  ),
+                                  SizedBox(
+                                    width: 8.w,
+                                  ),
+                                  TextView(
+                                    text: '+234',
+                                    fontSize: 12.sp,
+                                    fontWeight: FontWeight.w400,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                          onChanged: (value) {},
+                          icon: null,
+                        ),
                       ),
                     ),
                     SizedBox(
-                      width: 10.w,
+                      width: 5.w,
                     ),
                     Expanded(
-                      flex: 2,
-                      child: TextFormWidget(
-                        color1: AppColor.textgrey,
-                        color2: AppColor.textgrey,
-                        color3: AppColor.textgrey,
-                        color4: AppColor.textgrey,
-                        radius: BorderRadius.circular(5.r),
-                        label: '803 322 3892',
+                      flex: 3,
+                      child: Container(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 5.h,
+                          vertical: 1.h,
+                        ),
+                        decoration: BoxDecoration(
+                          color: AppColor.textgrey,
+                          borderRadius: BorderRadius.circular(5.r),
+                          border: Border.all(
+                            width: 1.w,
+                            color: AppColor.primary,
+                          ),
+                        ),
+                        child: CustomTextfield(
+                          width: 266.w,
+                          height: 50.h,
+                          radius: BorderRadius.circular(5.r),
+                          hintText: '803 322 3892',
+                          obscureText: false,
+                        ),
                       ),
                     ),
                   ],
@@ -126,8 +172,8 @@ class _SignUpState extends State<SignUp> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         ButtonWidget(
-                          fontSize: 16.sp,
-                          height: 50.h,
+                          fontSize: 17.sp,
+                          height: 55.h,
                           width: 250.w,
                           weight: FontWeight.w600,
                           radius: BorderRadius.circular(5.r),
